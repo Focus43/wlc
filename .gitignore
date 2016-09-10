@@ -1,0 +1,26 @@
+# ignore system files
+*/.DS_Store
+.DS_Store
+.DS_Store?
+
+# ignore error log
+error_log
+.ftpquota
+
+#ignore everything but the index.html
+web/application/files/*
+
+# ignore updates folder
+/web/updates/*
+
+# ignore sitemap.xml (Symlink is used in Pagodabox)
+/web/sitemap.xml
+
+# Since we're not going to be using Concrete5's default Grunt setup in /build, but in the root
+/node_modules
+.sass-cache
+npm-debug.log
+
+#ignore foundation node_modules and bower
+#/web/packages/wlc/themes/wlc/bower_components
+/web/packages/wlc/themes/wlc/node_modules
