@@ -1,6 +1,9 @@
 <?php 
 defined('C5_EXECUTE') or die("Access Denied.");
 
+// -- Set a few page vars -- \\
+$page = Page::getCurrentPage();
+
 // -- Include different elements of the page -- \\
 
 $this->inc('elements/head.php'); 
@@ -9,6 +12,7 @@ $this->inc('elements/header.php');
 <div class="container main-container">
     <div class="row">
         <div class="col-md-7 main">
+        <h1><?php echo $page->getCollectionName();?></h1>
             <?php 
             $a = new Area('Main');
             $a->setAreaGridMaximumColumns(12);
