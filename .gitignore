@@ -9,6 +9,7 @@ error_log
 
 #ignore everything but the index.html
 web/application/files/*
+web/application/files.zip
 
 # ignore updates folder
 /web/updates/*

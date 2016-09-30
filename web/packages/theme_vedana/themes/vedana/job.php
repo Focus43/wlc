@@ -12,7 +12,13 @@ $this->inc('elements/header.php');
 <div class="container main-container">
     <div class="row">
         <div class="col-md-7 main">
-        <h1><?php echo $page->getCollectionName();?></h1>
+            <h1 class="job-title">
+                <?php echo $page->getCollectionName();?>
+                    
+            </h1>
+            <p class="subheader">
+                <?php echo $page->getCollectionDescription();?>
+            </p>
             <?php 
             $a = new Area('Main');
             $a->setAreaGridMaximumColumns(12);
@@ -21,7 +27,7 @@ $this->inc('elements/header.php');
         </div>
         <aside class="col-md-4 col-sm-offset-1 right-sidebar sidebar">
             <?php 
-            $a = new Area('Sidebar');
+            $a = new GlobalArea('Global Sidebar');
             $a->display($c);
             ?>                
         </aside>        
