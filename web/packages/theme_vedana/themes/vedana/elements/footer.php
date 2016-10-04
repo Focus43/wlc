@@ -1,5 +1,6 @@
 <?php  defined('C5_EXECUTE') or die("Access Denied."); 
-$footer_top = new Area('Footer');
+$footer_top = new GlobalArea('FooterTop1');
+$footer_top2 = new GlobalArea('FooterTop2');
 $display_footer_top = (is_object($footer_top) ? ($footer_top->getTotalBlocksInArea($c) > 0) : 0) || $c->isEditMode();
 
 ?>
@@ -7,11 +8,16 @@ $display_footer_top = (is_object($footer_top) ? ($footer_top->getTotalBlocksInAr
 <footer>
     <?php  if ($display_footer_top) : ?>
     <section id="footer-top">
-        <?php 
-        $footer_top->enableGridContainer();
-        $footer_top->display($c);
-        ?>
-
+        <div class="container">
+            <div class="row phone-footer">
+                <div class="col-sm-12 col-md-6">
+                    <?php $footer_top->display($c);?>   
+                </div>
+                <div class="col-sm-12 col-md-6">
+                    <?php $footer_top2->display($c);?>   
+                </div>
+            </div>
+        </div>
     </section>
     <?php  endif ?>
     <section id="footer-bottom">
