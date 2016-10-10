@@ -27,22 +27,31 @@ $video_background = $c->getAttribute('vedana_youtube_backround_url');
 
 <header>
     <div class="info-bar <?php  if($blocks_in_info_bar): ?>with-blocks<?php  endif ?>">
-        <div class="container">
+        <!-- <div class="container"> -->
             <div class="row">
-                <div class="col-md-12 header-info">
+                <div class="col-md-8 header-info">
                     <?php  $header_info->display() ?>                            
                 </div>
-                <!-- <div class="col-md-2 header-social">
+                <div class="col-md-4 header-social">
                     <?php  $Header_social->display()?>                            
-                </div> -->
+                </div>
             </div><!-- /.row -->        
-        </div><!-- /.container -->
+        <!-- </div> --><!-- /.container -->
     </div><!-- /.info-bar -->
     
     <div class="page-header <?php  if($path): ?>with-image<?php  endif ?>" <?php  if($path): ?>style="background-image:url(<?php  echo $path ?>)"<?php  endif ?>>
         <?php  if ($video_background) : ?><div id="video_header_bg" class="elementPlayer" ><?php  endif ?>
-        <div class="container">
-            <div class="row">
+        <!-- <div class="container">
+            <div class="row"> -->
+            <nav class="main-nav">
+                <span class="main-logo">
+                    <a href="/" >Wyoming Landscape Company</a>
+                </span>
+                    <?php 
+                    $a = new GlobalArea('Header Navigation');
+                    $a->display();
+                    ?>
+                </nav>  
                 <?php  if($display_header_content_in_image) : ?>
                 <div class="intro-content-in-image">
                     <?php 
@@ -53,20 +62,15 @@ $video_background = $c->getAttribute('vedana_youtube_backround_url');
                 </div>
                 <a href="#" class="gotobottom"><i class="fa fa-arrow-circle-o-down"></i></a>
                 <?php  endif ?>
-                <div class="col-md-4 logo">
+                              
+               <!--  <div class="col-md-4 logo">
                     <?php 
                     $a = new GlobalArea('Site Name');
                     $a->display();
                     ?>                    
-                </div>
-                <nav class="col-md-8 main-nav">
-                    <?php 
-                    $a = new GlobalArea('Header Navigation');
-                    $a->display();
-                    ?>
-                </nav>                
-            </div><!-- /.row -->
-        </div><!-- /.container -->
+                </div> -->
+            <!-- </div> --><!-- /.row -->
+        <!-- </div> --><!-- /.container -->
          <?php  if ($video_background) : ?></div><?php  endif ?>
     </div><!-- /.page-header -->
 </header>

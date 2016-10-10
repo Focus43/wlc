@@ -29,8 +29,8 @@ div.loaded {
 // -- Info-bar --\\
 
 .info-bar {
-	background-color: @brand-quaternary-color;
-	min-height:@space-xxs; // la mini bar
+	// background-color: rgba(255,255,255,.75);
+	//min-height:@space-xxs; // la mini bar
 
 	.header-info {
 		text-align: right;
@@ -45,7 +45,7 @@ div.loaded {
 		color: @brand-white-color;
 	}
 	&.with-blocks {
-		padding: @space-xxs 0;
+		padding: @space-xs 0;
 	}
 }
 
@@ -60,9 +60,9 @@ div.loaded {
 		background-attachment: fixed;
 		
 		.main-nav ul.nav > li > a {
-			font-weight: 600;
-			text-shadow: 1px 1px 3px fade(@brand-black-color,80%);
-			color: @brand-white-color;
+			font-weight: 300;
+			// text-shadow: 1px 1px 3px fade(@brand-black-color,80%);
+			color: @brand-black-color;
 		}
 		.container {
 			// Pour que le .intro-content-in-image se positionne par rapport a .container
@@ -72,11 +72,12 @@ div.loaded {
 		.gotobottom {
 			position: absolute;
 			display: block;
-			bottom: 20px;
+			bottom: 0;
 			width: 100%;
-			font-size: 60px;
+			font-size: 40px;
+			line-height: 1em;
 			text-shadow: 0 0 12px rgba(75,71,80,0.5);
-			color: #fff;
+			color: @brand-white-color;
 			text-align: center;
 			z-index: 10;		
 		}
@@ -87,9 +88,10 @@ div.loaded {
 	 }
 }
 .logo {
-	padding-top: @space-s;
+	padding: @space-xxs;
 	.img-responsive{
-		max-width: 60%;
+		max-width: 33%;
+		padding-left: 10px;
 	}
 }
 .intro-content {
@@ -97,9 +99,9 @@ div.loaded {
 }
 .intro-content-in-image {
 	position: absolute;
-	width: 100%;
+	width: 50%;
 	top: 50%;
-	transform: translateY(-50%); // For centering
+	transform: translateY(-45%); // For centering
 
 	// opacity: .6; // Cela rend le texte plus lisible ?
 }
@@ -194,7 +196,7 @@ div.loaded {
 }
 
 // -- Footer -- \\
-footer{margin-top: 20px;}
+footer{}
 .phone-footer{
 	i {
 		font-size: 6em;

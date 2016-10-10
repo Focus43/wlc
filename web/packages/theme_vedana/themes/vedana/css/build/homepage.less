@@ -3,10 +3,14 @@
   width: 80%;
   margin: 0 auto;
   h1{
-    font-weight: bold;
-    color: #fff;
-    font-size: 5.5em;
+    font-weight: 300;
+    color: @brand-white-color;
+    text-shadow:none;
+    text-transform: uppercase;
+    font-size: 3.5em;
     line-height: 1.1em;
+    font-family: "Lato";
+    margin-bottom: 20px;
   }
 }
 .cta-page-list{
@@ -14,9 +18,11 @@
 }
 
 .cta-button {
+  font-family: "Lato";
+  text-transform: uppercase;
   display: inline-block;
-  padding:22px 47px 22px 70px;
-  font-size: 18px;
+  padding:20px 37px 20px 60px;
+  font-size: 14px;
   text-align: center;
   line-height: @space-s;
   font-weight: bold;
@@ -27,36 +33,33 @@
   margin-right: 7px;
   transition: all 0.5s ease 0s;
   &.default {
-    .button-color (@brand-black-color);
+    .button-color (darken(@brand-black-color, 10%));
     background-image: url("../../images/shovel.png");
   }
   &.default:hover{
-    .button-color (darken(@brand-black-color, 10%))
+    .button-color (darken(@brand-black-color, 20%))
   }
   &.primary {
-    .button-color (@brand-primary-color);
+    .button-color (darken(@brand-black-color, 10%));
     background-image: url("../../images/fire.png");
   }
   &.primary:hover{
-    .button-color (darken(@brand-primary-color, 10%))
+    .button-color (darken(@brand-black-color, 20%))
   }
   &.secondary {
-    .button-color (#1092b1);
+    .button-color (#a31a1a);
     background-image: url("../../images/trees.png");
   }
   &.secondary:hover{
-    .button-color (darken(#1092b1, 10%))
+    .button-color (darken(#a31a1a, 20%))
   }
   &.tertiary {
-    .button-color (@brand-tertiary-color);
-  }
-  &.white {
-    .button-color (@brand-white-color);
+    .button-color (darken(@brand-black-color, 10%));
   }
 
 }
 
 .button-color (@color) {
-    color: #fff !important;
+    color: @brand-white-color !important;
     background-color: @color !important; // To override Footer color or Links
 }
