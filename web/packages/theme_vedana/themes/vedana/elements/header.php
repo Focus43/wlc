@@ -1,5 +1,10 @@
 <?php  defined('C5_EXECUTE') or die("Access Denied.");
-
+$page = Page::getCurrentPage();
+if($page->getCollectionID() == 1){
+    $currPage = 'home';
+} else {
+    $currPage = '';
+}
 //  Make test to know if they are blocks in the inf-bar to add padding and other styling
 
 $header_info = new GlobalArea('Header Info');
@@ -39,19 +44,29 @@ $video_background = $c->getAttribute('vedana_youtube_backround_url');
         <!-- </div> --><!-- /.container -->
     </div><!-- /.info-bar -->
     
-    <div class="page-header <?php  if($path): ?>with-image<?php  endif ?>" <?php  if($path): ?>style="background-image:url(<?php  echo $path ?>)"<?php  endif ?>>
+    <div class="page-header <?php  if($path): ?>with-image <?php  endif; echo $currPage;?>" <?php  if($path): ?>style="background-image:url(<?php  echo $path ?>)"<?php  endif ?>>
         <?php  if ($video_background) : ?><div id="video_header_bg" class="elementPlayer" ><?php  endif ?>
         <!-- <div class="container">
             <div class="row"> -->
+
             <nav class="main-nav">
                 <span class="main-logo">
                     <a href="/" >Wyoming Landscape Company</a>
                 </span>
+                <div class="col-md-10">
                     <?php 
-                    $a = new GlobalArea('Header Navigation');
-                    $a->display();
+                        $a = new GlobalArea('Header Navigation');
+                        $a->display();
                     ?>
-                </nav>  
+                </div>
+                <div class="col-md-2">
+                    <?php 
+                        $a = new GlobalArea('Extra Nav');
+                        $a->display();
+                    ?>
+                </div>
+            </nav> 
+
                 <?php  if($display_header_content_in_image) : ?>
                 <div class="intro-content-in-image">
                     <?php 

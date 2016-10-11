@@ -39,7 +39,16 @@
     }    
   }
 }
-
+@media (max-width: 1350px) {
+  .main-logo{
+    height: 57px;
+    background-size: 100px 57px;
+    top: 4px;
+    width: 100px;
+    left: 50%;
+    margin-left: 200px;
+  }
+}
 // La ou les colonnes s'éffondrent
   @media (max-width: 991px) {
     
@@ -68,17 +77,86 @@
       margin: 0 auto;
     }
     .intro-content-in-image {
-      margin-top: 0;
+      padding: 20px 200px;
+      width: 100%;
+      top: 20%;
+      transform: translateY(0);
+      -webkit-transition: all 700ms cubic-bezier(0.26, 1.06, 0.89, 0.9);
+      transition: all 700ms cubic-bezier(0.26, 1.06, 0.89, 0.9);
+      margin: 0 auto;
       .main-call{
-        h1{font-size:2.5em;margin-bottom: 25px;}
+        h1{font-size:3.5em;margin-bottom: 25px;text-align: center;}
       }
     }
-    .cta-button{
-      display: block;
-      width:75%;
-      margin: 0 auto;
-      background-size: 6%;
+    //homepage buttons
+    .outline-button {
+      position: relative;
+      display: inline-block;
+      font-size: 16px;
+      text-align: center;
+      line-height: @space-s;
+      background-repeat: no-repeat;
+      background-position: 20px center;
+      background-size: 12%;
+      margin-bottom: 5px;
+      background-color: @brand-white-color;
+      &:after, &:before {
+        content: "";
+        position: absolute;
+        display: none;
+        font-weight: 400;
+        line-height: @space-l; // 60px Je ne sai pas pq si grand ?
+        -webkit-font-smoothing: antialiased;
+        text-transform:uppercase;
+        text-decoration: none;
+        text-indent: 0;
+        text-wrap:none;
+        transform-origin: 50% 50% -2.07692em;
+        transition: 0.3s cubic-bezier(0.19, 1, 0.22, 1); 
+      }
+
+      &.default {
+        color:#000;
+      }
+      &.primary {
+        color:#000;
+      }
+      &.secondary {
+        color:#000;
+      }
+      &.tertiary {
+        color:#000;
+      }
+
+      
+      &.maint {
+        background-image: url("../../images/shovel.png");
+        width: 100%;
+        font-size: 30px;
+        display: block;
+      }
+      &.fire {
+        background-image: url("../../images/fire.png");
+        width: 100%;
+        font-size: 30px;
+        padding:22px 67px 22px 44px;
+        display: block;
+      }
+      &.landscape {
+        line-height: @space-s;
+        font-size: 30px;
+        width: 100%;
+        background-size: 10%;
+        background-image: url("../../images/trees.png");
+        background-position: 20px center;
+        padding:22px 67px 22px 44px;
+      }
+
+
+
     }
+
+    //end homepage buttons
 
 
     // -- main-nav -- \\ 
@@ -87,6 +165,18 @@
     }
     .small-display-nav-bar-inner {
       display: block;
+    }
+    .small-display-nav-bar   {
+      .mobile-logo{
+        display: block;
+        z-index: 1001;
+        height: 77px;
+        background-size: 127px 77px;
+        top: 4px;
+        width: 130px;
+        left: 50%;
+        //margin-left: 200px;
+      }
     }
     // -- Top -- \\
     .info-bar .header-info, .header-social {
@@ -133,7 +223,11 @@
       font-size: 24px;
       height: auto;
       top: -20px;      
-    }    
+    } 
+    .intro-content-in-image {
+      padding: 20px 10px;
+    }
+
   }
   @media (min-width: 768px) and (max-width:991px) {
      .glued-3 {
@@ -143,6 +237,9 @@
 
 // Les tout petits
 @media (max-width:480px) {
+    .intro-content-in-image {
+      padding: 20px 10px;
+    }
   .main-call{display: none;}
     // -- Page List -- \\
     .grid li {

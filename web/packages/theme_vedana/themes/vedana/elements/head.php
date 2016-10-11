@@ -22,6 +22,9 @@
 <body class="<?php  echo $c->isEditMode() ? 'edit-mode' : '' ?> <?php  $p = new Permissions($c) ; if($p->canAdminPage()): ?>edit-bar <?php  endif ?>">
     <!-- Responsive Nav -->
     <div class="small-display-nav-bar">
+        <span class="mobile-logo">
+            <a href="/" >Wyoming Landscape Company</a>
+        </span>
         <?php  
         $a = new GlobalArea('Responsive Navigation');
         $a->display();

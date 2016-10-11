@@ -54,7 +54,7 @@ div.loaded {
 .page-header {
 	margin: 0 0 @space-s 0; 
 	&.with-image {
-		height: 90vh;
+		height: 100vh;
 		margin: 0;
 		background-size: cover;
 		background-attachment: fixed;
@@ -62,7 +62,7 @@ div.loaded {
 		.main-nav ul.nav > li > a {
 			font-weight: 300;
 			// text-shadow: 1px 1px 3px fade(@brand-black-color,80%);
-			color: @brand-black-color;
+			color: @brand-white-color;
 		}
 		.container {
 			// Pour que le .intro-content-in-image se positionne par rapport a .container
@@ -74,12 +74,12 @@ div.loaded {
 			display: block;
 			bottom: 0;
 			width: 100%;
-			font-size: 40px;
-			line-height: 1em;
+			font-size: 60px;
 			text-shadow: 0 0 12px rgba(75,71,80,0.5);
 			color: @brand-white-color;
 			text-align: center;
-			z-index: 10;		
+			z-index: 10;
+			line-height: 1rem;		
 		}
 	}
 	 #video_header_bg {
@@ -95,19 +95,21 @@ div.loaded {
 	}
 }
 .intro-content {
-	border-top: 1px solid @brand-grey-color;
+	//border-top: 1px solid @brand-grey-color;
 }
 .intro-content-in-image {
 	position: absolute;
-	width: 50%;
-	top: 50%;
-	transform: translateY(-45%); // For centering
-
-	// opacity: .6; // Cela rend le texte plus lisible ?
+  width: 485px;
+  top: 65%;
+  transform: translateY(-30%);
+  padding: 30px;
+  //background: rgba(0,0,0,.4);
+  -webkit-transition: all 700ms cubic-bezier(0.26, 1.06, 0.89, 0.9);
+  transition: all 700ms cubic-bezier(0.26, 1.06, 0.89, 0.9);
 }
 .header-image {
 	&.with-blocks {
-		border-top: 1px solid @brand-grey-color;	
+		//border-top: 1px solid @brand-grey-color;	
 	}
 	
 }

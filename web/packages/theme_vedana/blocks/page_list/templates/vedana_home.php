@@ -11,15 +11,18 @@
     $date = date('M / d / Y',strtotime($page->getCollectionDatePublic())); 
     $target = ($page->getCollectionPointerExternalLink() != '' && $page->openCollectionPointerExternalLinkInNewWindow()) ? '_blank' : $page->getAttribute('nav_target');
     $target = empty($target) ? '_self' : $target;
-    if($key == 0) {$style = 'primary';}
-    if($key == 1) {$style = 'secondary';}
-    if($key == 2) {$style = 'default';}
+    if($key == 0) {$style = 'landscape';}
+    if($key == 1) {$style = 'fire';}
+    if($key == 2) {$style = 'maint';}
   ?>
-  <a href="<?php  echo $url?>" target="<?php  echo $target ?>">
+  <!-- <a href="<?php  echo $url?>" target="<?php  echo $target ?>">
     <span class="cta-button <?php echo $style; ?>">
       <?php  echo $title ?>
     </span>
-  </a>        
+  </a>  -->   
+  <a class="outline-button tertiary <?php echo $style; ?>" href="<?php  echo $url?>" data-concrete5-link-type="image">
+    <?php  echo $title ?>
+  </a>    
 
   <?php  endforeach; ?>
 
