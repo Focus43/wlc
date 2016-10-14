@@ -26,7 +26,7 @@
     text-indent: 0;
     text-wrap:none;
     transform-origin: 50% 50% -2.07692em;
-    transition: 0.3s cubic-bezier(0.19, 1, 0.22, 1); 
+    transition: 0.7s cubic-bezier(0.19, 1, 0.22, 1); 
   }
   &:hover:before {
     .transform (rotateX(90deg));
@@ -67,21 +67,33 @@
     font-size: 15px;
     padding:22px 67px 22px 44px;
   }
-  &.landscape {
-    line-height: 1rem;
-    font-size: 28px;
-    width: 99.5%;
-    background-size: 10%;
-    display: block;
-    background-image: url("../../images/trees.png");
-    background-position: 30px center;
-    padding:32px 67px 32px 44px;
-  }
-
-
+}
+.button{
+  display: block;
+  text-align: center;
+  color: #d8d2b5;
+  margin-bottom: 5px;
+  transition: 0.7s cubic-bezier(0.19, 1, 0.22, 1); 
 
 }
-
+.landscape {
+  line-height: 1rem;
+  font-size: 28px;
+  width: 99.5%;
+  background-size: 10%;
+  display: block;
+  background-image: url("../../images/trees.png");
+  background-repeat: no-repeat;
+  background-color: #348e9d;
+  background-position: 30px center;
+  text-transform: uppercase;
+  padding:32px 0;
+  border: 1px solid darken(#348e9d, 10%);
+  &:hover{
+    background-color: darken(#348e9d, 10%);
+    color: lighten(#d8d2b5, 10%)
+  }
+}
 .outline-button-color (@color) {
     color: transparent; // To make sure that overide other classes like => .primary * {}
 	&:after, &:before {
