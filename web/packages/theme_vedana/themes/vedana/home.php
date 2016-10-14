@@ -8,7 +8,7 @@ $this->inc('elements/header.php');
 ?>
 
 <main class="full main-container">
-  <?php  $this->inc('elements/multiple_area.php',array('c'=>$c,'area_name'=>'Main','attribute_handle'=>'vedana_number_of_main_areas'));  ?>   
+	<?php  $this->inc('elements/multiple_area.php',array('c'=>$c,'area_name'=>'Main','attribute_handle'=>'vedana_number_of_main_areas'));  ?>		
 </main>
 
 
